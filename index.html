@@ -517,6 +517,54 @@
             font-size: 0.95rem;
         }
 
+        /* Estate Agent Section */
+        .estate-agents {
+            padding: 5rem 0;
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .ea-scenario {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1.5rem;
+            align-items: center;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(212,175,55,.04), rgba(255,179,71,.04));
+            border: 1px solid var(--border-subtle);
+        }
+
+        @media(max-width:767px) {
+            .ea-scenario { grid-template-columns: 1fr; }
+            .ea-vs { display: none; }
+        }
+
+        .ea-col-label { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: #ff4d4d; font-weight: 700; margin-bottom: 1rem; }
+        .ea-vs { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 700; color: var(--accent-gold); text-align: center; }
+
+        .ea-step { padding: .75rem 1rem; border-radius: 6px; font-size: .88rem; margin-bottom: .5rem; line-height: 1.5; }
+        .ea-step.bad { background: rgba(255,77,77,.06); color: #999; border-left: 3px solid rgba(255,77,77,.3); }
+        .ea-step.good { background: rgba(212,175,55,.06); color: var(--text-light); border-left: 3px solid rgba(212,175,55,.4); }
+
+        .ea-usecases {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .ea-usecase {
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--border-subtle);
+            background: linear-gradient(135deg, rgba(212,175,55,.03), transparent);
+            transition: border-color .3s, box-shadow .3s;
+        }
+
+        .ea-usecase:hover { border-color: var(--accent-gold); box-shadow: 0 10px 30px rgba(212,175,55,.1); }
+        .ea-uc-icon { font-size: 1.8rem; margin-bottom: .75rem; }
+        .ea-uc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: .75rem; color: var(--accent-gold); }
+        .ea-uc-desc { font-size: .88rem; color: var(--text-muted); line-height: 1.7; }
+
         /* Pricing Section */
         .pricing {
             padding: 5rem 0;
@@ -973,6 +1021,59 @@
                             AI system that handles your repetitive tasks and never misses a lead.
                         </p>
                         <div class="client-metric">Join the automation revolution</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="estate-agents">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Built For Estate Agents</div>
+                    <h2 class="section-title">Your Next Deal Is Already Waiting — You're Just Too Busy to Answer</h2>
+                    <p style="color:var(--text-muted);max-width:600px;margin:0 auto;font-size:1rem;line-height:1.8">
+                        Estate agents in Pretoria lose deals every week to slow response times. Buyers enquire on five properties — whoever responds first wins. We make sure that's always you.
+                    </p>
+                </div>
+
+                <div class="ea-scenario">
+                    <div class="ea-col ea-before">
+                        <div class="ea-col-label">Without Ytype</div>
+                        <div class="ea-step bad">📱 Buyer submits inquiry at 9pm on Property24</div>
+                        <div class="ea-step bad">😴 Agent sees it next morning at 8am</div>
+                        <div class="ea-step bad">📞 Calls back — buyer already booked with competitor</div>
+                        <div class="ea-step bad">💸 Deal lost. Commission gone.</div>
+                    </div>
+                    <div class="ea-vs">VS</div>
+                    <div class="ea-col ea-after">
+                        <div class="ea-col-label" style="color:var(--accent-gold)">With Ytype</div>
+                        <div class="ea-step good">📱 Buyer submits inquiry at 9pm on Property24</div>
+                        <div class="ea-step good">⚡ AI responds via WhatsApp in &lt;30 seconds</div>
+                        <div class="ea-step good">🤖 Qualifies budget, area, timeline automatically</div>
+                        <div class="ea-step good">📅 Books viewing in your calendar — you wake up to confirmed appointments</div>
+                    </div>
+                </div>
+
+                <div class="ea-usecases">
+                    <div class="ea-usecase">
+                        <div class="ea-uc-icon">🏡</div>
+                        <div class="ea-uc-title">New Listing Alert Automation</div>
+                        <p class="ea-uc-desc">Every time you list a new property, AI automatically notifies your warm lead database, matches it to buyers on your list by budget and area, and starts conversations instantly.</p>
+                    </div>
+                    <div class="ea-usecase">
+                        <div class="ea-uc-icon">🔍</div>
+                        <div class="ea-uc-title">Buyer Qualification on Autopilot</div>
+                        <p class="ea-uc-desc">AI asks the right questions — pre-approval status, cash buyer or bond, urgency, must-haves. You only spend time with serious buyers who are ready to move.</p>
+                    </div>
+                    <div class="ea-usecase">
+                        <div class="ea-uc-icon">📅</div>
+                        <div class="ea-uc-title">Viewing Scheduling Without Back-and-Forth</div>
+                        <p class="ea-uc-desc">Buyers pick from your available slots. Confirmations, reminders, and rescheduling all handled automatically. No more phone tag to book a 20-minute viewing.</p>
+                    </div>
+                    <div class="ea-usecase">
+                        <div class="ea-uc-icon">🔁</div>
+                        <div class="ea-uc-title">Cold Lead Re-Engagement</div>
+                        <p class="ea-uc-desc">Leads that went cold 3 months ago get a personalised AI follow-up when a matching property hits the market. Deals you thought were dead come back to life.</p>
                     </div>
                 </div>
             </div>
